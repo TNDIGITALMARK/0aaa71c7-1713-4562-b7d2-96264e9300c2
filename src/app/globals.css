@@ -1,74 +1,72 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap');
 
 /* ============================================
-   MARKETING AGENCY DESIGN SYSTEM
-   Extracted from design reference: ai-generated-preview.png
+   PHOENIX MARKETING AGENCY DESIGN SYSTEM
+   Modern, professional design with elegant typography
    ============================================ */
 
 :root {
-  /* EXACT COLOR PALETTE - From Design Reference */
+  /* MODERN COLOR PALETTE - Professional Marketing Agency */
 
-  /* Primary Navy Blue - Header/Footer/Primary Sections */
-  --primary-navy: 220 48% 19%;        /* #1a2744 */
+  /* Primary: Deep Indigo - Sophisticated and trustworthy */
+  --primary: 231 48% 25%;             /* #263461 - Deep indigo */
+  --primary-foreground: 0 0% 100%;    /* White on primary */
 
-  /* Bright Orange/Coral - CTA Buttons and Accents */
-  --brand-orange: 10 100% 65%;        /* #ff6b4a */
+  /* Secondary: Rich Navy - Supporting color */
+  --secondary: 220 48% 19%;           /* #1a2744 - Navy */
+  --secondary-foreground: 0 0% 100%;  /* White on secondary */
 
-  /* Light Gray Background - Body */
-  --light-gray-bg: 214 25% 97%;       /* #f5f7fa */
+  /* Accent: Vibrant Coral - Energy and action */
+  --accent: 14 91% 62%;               /* #f5755e - Coral */
+  --accent-foreground: 0 0% 100%;     /* White on accent */
 
-  /* Pure White - Cards and Content */
-  --pure-white: 0 0% 100%;            /* #ffffff */
+  /* Background: Soft neutral tones */
+  --background: 0 0% 100%;            /* Pure white */
+  --foreground: 220 25% 15%;          /* Near black for text */
 
-  /* Design System Variables (shadcn compatible) */
-  --background: 214 25% 97%;          /* Light gray background */
-  --foreground: 220 48% 19%;          /* Navy text */
-
+  /* Card surfaces */
   --card: 0 0% 100%;                  /* White cards */
-  --card-foreground: 220 48% 19%;     /* Navy text on cards */
+  --card-foreground: 220 25% 15%;     /* Dark text on cards */
 
+  /* Muted elements */
+  --muted: 210 20% 96%;               /* Very light gray */
+  --muted-foreground: 220 15% 45%;    /* Muted gray text */
+
+  /* Borders and inputs */
+  --border: 214 20% 88%;
+  --input: 214 20% 88%;
+  --ring: 231 48% 25%;                /* Focus ring matches primary */
+
+  /* Popover */
   --popover: 0 0% 100%;
-  --popover-foreground: 220 48% 19%;
+  --popover-foreground: 220 25% 15%;
 
-  /* Primary: Navy Blue */
-  --primary: 220 48% 19%;
-  --primary-foreground: 0 0% 100%;
-
-  /* Secondary: Light Gray */
-  --secondary: 214 20% 95%;
-  --secondary-foreground: 220 48% 19%;
-
-  /* Muted: Subtle Gray */
-  --muted: 214 20% 92%;
-  --muted-foreground: 220 20% 45%;
-
-  /* Accent: Brand Orange */
-  --accent: 10 100% 65%;
-  --accent-foreground: 0 0% 100%;
-
-  /* Destructive: Red */
+  /* Destructive */
   --destructive: 0 70% 50%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Light gray */
-  --border: 214 20% 88%;
-  --input: 214 20% 88%;
-  --ring: 10 100% 65%;
+  /* Design System Tokens */
+  --radius: 0.75rem;                  /* 12px - Modern rounded corners */
+  --radius-lg: 1rem;                  /* 16px - Large radius */
+  --radius-md: 0.5rem;                /* 8px - Medium radius */
+  --radius-sm: 0.25rem;               /* 4px - Small radius */
 
-  /* Border Radius - From design reference */
-  --radius: 0.5rem;                   /* 8px for cards */
-  --radius-button: 0.25rem;           /* 4px for buttons */
+  /* Shadow System */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 
   /* Sidebar variables */
-  --sidebar-background: 220 48% 19%;
+  --sidebar-background: 231 48% 25%;
   --sidebar-foreground: 0 0% 100%;
-  --sidebar-primary: 10 100% 65%;
+  --sidebar-primary: 14 91% 62%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 220 48% 25%;
+  --sidebar-accent: 231 48% 30%;
   --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-border: 220 48% 25%;
-  --sidebar-ring: 10 100% 65%;
+  --sidebar-border: 231 48% 30%;
+  --sidebar-ring: 14 91% 62%;
 }
 
 .dark {
@@ -184,7 +182,7 @@
 }
 
 /* ============================================
-   TYPOGRAPHY SYSTEM - Based on Design Reference
+   TYPOGRAPHY SYSTEM - Modern Marketing Design
    ============================================ */
 
 body {
@@ -192,16 +190,28 @@ body {
   color: hsl(var(--foreground));
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-weight: 400;
   font-feature-settings: "rlig" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Heading Hierarchy - Exact sizes from design */
+/* Heading Hierarchy - Modern scaling with elegant display font for hero */
 h1 {
-  font-size: 3rem;        /* 48px - Hero headlines */
+  font-family: 'Playfair Display', Georgia, serif;  /* Elegant serif for hero headlines */
+  font-size: 3.5rem;      /* 56px - Bold hero headlines */
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: hsl(var(--foreground));
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-family: 'Playfair Display', Georgia, serif;  /* Serif for major sections */
+  font-size: 2.5rem;      /* 40px - Section titles */
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -209,8 +219,9 @@ h1 {
   margin-bottom: 1rem;
 }
 
-h2 {
-  font-size: 2rem;        /* 32px - Section titles */
+h3 {
+  font-family: 'Inter', sans-serif;  /* Sans-serif for subsections */
+  font-size: 1.75rem;     /* 28px - Subsection titles */
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.015em;
@@ -218,8 +229,9 @@ h2 {
   margin-bottom: 0.875rem;
 }
 
-h3 {
-  font-size: 1.5rem;      /* 24px - Subsection titles */
+h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.375rem;    /* 22px */
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.01em;
@@ -227,23 +239,17 @@ h3 {
   margin-bottom: 0.75rem;
 }
 
-h4 {
-  font-size: 1.25rem;     /* 20px */
-  font-weight: 600;
-  line-height: 1.4;
-  color: hsl(var(--foreground));
-  margin-bottom: 0.625rem;
-}
-
 h5 {
+  font-family: 'Inter', sans-serif;
   font-size: 1.125rem;    /* 18px */
   font-weight: 600;
   line-height: 1.5;
   color: hsl(var(--foreground));
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.625rem;
 }
 
 h6 {
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;        /* 16px */
   font-weight: 600;
   line-height: 1.5;
@@ -252,55 +258,82 @@ h6 {
 }
 
 p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  color: hsl(var(--foreground));
+}
+
+/* Lead text - Larger intro paragraphs */
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: hsl(var(--muted-foreground));
 }
 
 /* Links */
 a {
   color: hsl(var(--accent));
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 a:hover {
   color: hsl(var(--accent));
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 /* Strong and emphasis */
 strong {
   font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+em {
+  font-style: italic;
 }
 
 /* ============================================
-   COMPONENT DEFAULTS - From Design Reference
+   COMPONENT DEFAULTS - Modern Marketing Style
    ============================================ */
 
 /* Button Defaults */
 button {
   font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;    /* 14px */
-  border-radius: var(--radius-button);
-  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 0.9375rem;   /* 15px - Slightly larger for readability */
+  border-radius: var(--radius-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* Form Elements */
 input, textarea, select {
   font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
-  border-radius: var(--radius-button);
-  border: 1px solid hsl(var(--border));
-  padding: 0.5rem 0.75rem;
-  transition: border-color 0.2s ease;
+  font-size: 0.9375rem;
+  border-radius: var(--radius-md);
+  border: 2px solid hsl(var(--border));
+  padding: 0.625rem 1rem;
+  transition: all 0.2s ease;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: hsl(var(--ring));
-  box-shadow: 0 0 0 3px hsl(var(--ring) / 0.1);
+  box-shadow: 0 0 0 4px hsl(var(--ring) / 0.1);
+}
+
+input::placeholder, textarea::placeholder {
+  color: hsl(var(--muted-foreground));
+  opacity: 0.6;
 }
 
 /* ============================================
@@ -329,28 +362,96 @@ input:focus, textarea:focus, select:focus {
 
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 /* Section Spacing */
 .section-padding {
-  padding: 5rem 0;    /* 80px vertical */
+  padding: 6rem 0;    /* 96px vertical - More generous spacing */
 }
 
-/* CTA Button Style - Orange from design */
-.btn-cta {
+.section-padding-sm {
+  padding: 4rem 0;    /* 64px vertical - Compact sections */
+}
+
+/* CTA Button Styles */
+.btn-primary {
   background-color: hsl(var(--accent));
   color: hsl(var(--accent-foreground));
-  padding: 0.75rem 2rem;
-  border-radius: var(--radius-button);
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-md);
   font-weight: 600;
+  font-size: 1rem;
   border: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
-.btn-cta:hover {
+.btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px hsl(var(--accent) / 0.3);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.15);
+  background-color: hsl(var(--accent));
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: hsl(var(--primary));
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid hsl(var(--primary));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary:hover {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.15);
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animate on scroll (optional utility) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Gradient animation for hero text */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 6s ease infinite;
 }

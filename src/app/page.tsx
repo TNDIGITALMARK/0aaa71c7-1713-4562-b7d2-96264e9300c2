@@ -9,114 +9,163 @@ export default function HomePage() {
     <div className="min-h-screen">
       <Header />
 
-      {/* Hero Section */}
+      {/* Hero Section - Modern Revamp */}
       <section
-        className="relative bg-[hsl(var(--primary))] text-white py-32 overflow-hidden"
-        style={{
-          backgroundImage: "url('/generated/hero-bg.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-[hsl(var(--primary))] via-[hsl(var(--secondary))] to-[hsl(var(--primary))] text-white overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary))]/95 via-[hsl(var(--primary))]/90 to-[hsl(var(--primary))]/85"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-[hsl(var(--accent))] drop-shadow-lg [text-shadow:_0_4px_12px_rgb(0_0_0_/_0.4)]">
-              Creative Marketing Solutions
-            </h1>
-            <p className="text-xl md:text-2xl mb-10 text-white font-medium drop-shadow-md">
-              Innovate. Engage. Grow Your Brand.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        {/* Background Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[hsl(var(--accent))] rounded-full blur-[120px] translate-x-1/3 -translate-y-1/3"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[hsl(var(--accent))] rounded-full blur-[100px] -translate-x-1/4 translate-y-1/4"></div>
+        </div>
+
+        {/* Subtle Background Image */}
+        <div
+          className="absolute inset-0 opacity-[0.08] mix-blend-overlay"
+          style={{
+            backgroundImage: "url('/generated/hero-bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></div>
+
+        <div className="container mx-auto px-6 lg:px-8 relative z-10 py-20">
+          <div className="max-w-5xl mx-auto">
+            {/* Badge */}
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+                <span className="inline-block w-2 h-2 rounded-full bg-[hsl(var(--accent))] animate-pulse"></span>
+                <span className="text-sm font-medium text-white/90">Award-Winning Marketing Agency</span>
+              </div>
+            </div>
+
+            {/* Main Headline */}
+            <div className="text-center space-y-6 mb-12">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1]">
+                <span className="block text-white">Transform Your</span>
+                <span className="block bg-gradient-to-r from-[hsl(var(--accent))] via-orange-400 to-[hsl(var(--accent))] bg-clip-text text-transparent animate-gradient">
+                  Brand Story
+                </span>
+              </h1>
+
+              <p className="text-xl md:text-2xl lg:text-3xl text-white/90 font-light max-w-3xl mx-auto leading-relaxed">
+                Elevate your marketing with data-driven strategies and creative excellence that drive measurable growth.
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Link
                 href="/contact"
-                className="inline-block bg-[hsl(var(--accent))] text-white px-10 py-5 rounded-lg font-semibold text-lg hover:transform hover:-translate-y-1 hover:shadow-2xl transition-all duration-200 shadow-xl"
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-[hsl(var(--accent))] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[hsl(var(--accent))]/50"
               >
-                VIEW OUR WORK
+                <span className="relative z-10 flex items-center gap-2">
+                  Start Your Journey
+                  <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
+
               <Link
-                href="/services"
-                className="inline-block bg-white/10 backdrop-blur-sm text-white px-10 py-5 rounded-lg font-semibold text-lg hover:bg-white/20 hover:transform hover:-translate-y-1 transition-all duration-200 border-2 border-white/30"
+                href="/portfolio"
+                className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-white/10 backdrop-blur-md rounded-xl border-2 border-white/30 transition-all duration-300 hover:bg-white hover:text-[hsl(var(--primary))] hover:scale-105 hover:border-white"
               >
-                Our Services
+                <span className="flex items-center gap-2">
+                  View Our Work
+                  <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
               </Link>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 text-center opacity-80">
+              <div className="flex flex-col items-center">
+                <div className="text-3xl md:text-4xl font-bold text-[hsl(var(--accent))]">500+</div>
+                <div className="text-sm md:text-base text-white/70 font-medium">Campaigns Launched</div>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-white/20"></div>
+              <div className="flex flex-col items-center">
+                <div className="text-3xl md:text-4xl font-bold text-[hsl(var(--accent))]">250+</div>
+                <div className="text-sm md:text-base text-white/70 font-medium">Happy Clients</div>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-white/20"></div>
+              <div className="flex flex-col items-center">
+                <div className="text-3xl md:text-4xl font-bold text-[hsl(var(--accent))]">98%</div>
+                <div className="text-sm md:text-base text-white/70 font-medium">Satisfaction Rate</div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-[hsl(var(--primary))]">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="text-white">
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-[hsl(var(--accent))]">500+</div>
-              <p className="text-sm md:text-base text-white/80">Successful Campaigns</p>
-            </div>
-            <div className="text-white">
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-[hsl(var(--accent))]">250+</div>
-              <p className="text-sm md:text-base text-white/80">Happy Clients</p>
-            </div>
-            <div className="text-white">
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-[hsl(var(--accent))]">98%</div>
-              <p className="text-sm md:text-base text-white/80">Client Satisfaction</p>
-            </div>
-            <div className="text-white">
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-[hsl(var(--accent))]">15+</div>
-              <p className="text-sm md:text-base text-white/80">Years Experience</p>
-            </div>
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="flex flex-col items-center gap-2 text-white/60">
+            <span className="text-xs font-medium tracking-wider uppercase">Scroll Down</span>
+            <svg className="w-6 h-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[hsl(var(--primary))]">
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="text-sm font-semibold tracking-wider uppercase text-[hsl(var(--accent))]">What We Do</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[hsl(var(--primary))]">
               Our Core Services
             </h2>
-            <p className="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
-              We deliver comprehensive marketing solutions tailored to your business needs
+            <p className="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto leading-relaxed">
+              Comprehensive marketing solutions designed to accelerate your growth and maximize impact.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
             {/* Digital Marketing Card */}
-            <div className="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-[hsl(var(--accent))] flex items-center justify-center">
-                <Target className="w-8 h-8 text-[hsl(var(--accent))]" />
+            <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[hsl(var(--accent))] to-orange-400 rounded-t-2xl"></div>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-[hsl(var(--accent))]/10 to-orange-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Target className="w-9 h-9 text-[hsl(var(--accent))]" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[hsl(var(--primary))]">
-                DIGITAL MARKETING
+              <h3 className="text-xl font-bold mb-4 text-[hsl(var(--primary))] text-center">
+                Digital Marketing
               </h3>
-              <p className="text-[hsl(var(--muted-foreground))] text-sm">
-                Strategic campaigns that drive results and maximize your ROI through data-driven approaches.
+              <p className="text-[hsl(var(--muted-foreground))] text-center leading-relaxed">
+                Strategic campaigns that drive results and maximize your ROI through data-driven approaches and innovative tactics.
               </p>
             </div>
 
             {/* Branding Card */}
-            <div className="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-[hsl(var(--accent))] flex items-center justify-center">
-                <Megaphone className="w-8 h-8 text-[hsl(var(--accent))]" />
+            <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[hsl(var(--primary))] to-blue-600 rounded-t-2xl"></div>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-[hsl(var(--primary))]/10 to-blue-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Megaphone className="w-9 h-9 text-[hsl(var(--primary))]" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[hsl(var(--primary))]">
-                BRANDING
+              <h3 className="text-xl font-bold mb-4 text-[hsl(var(--primary))] text-center">
+                Brand Strategy
               </h3>
-              <p className="text-[hsl(var(--muted-foreground))] text-sm">
-                Build a powerful brand identity that resonates with your target audience and stands out.
+              <p className="text-[hsl(var(--muted-foreground))] text-center leading-relaxed">
+                Build a powerful brand identity that resonates with your target audience and creates lasting connections.
               </p>
             </div>
 
             {/* Social Media Card */}
-            <div className="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-[hsl(var(--accent))] flex items-center justify-center">
-                <Users className="w-8 h-8 text-[hsl(var(--accent))]" />
+            <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-t-2xl"></div>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Users className="w-9 h-9 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[hsl(var(--primary))]">
-                SOCIAL MEDIA
+              <h3 className="text-xl font-bold mb-4 text-[hsl(var(--primary))] text-center">
+                Social Media
               </h3>
-              <p className="text-[hsl(var(--muted-foreground))] text-sm">
-                Engage your audience with compelling content and strategic social media management.
+              <p className="text-[hsl(var(--muted-foreground))] text-center leading-relaxed">
+                Engage your audience with compelling content and strategic social media management that drives engagement.
               </p>
             </div>
           </div>

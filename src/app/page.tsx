@@ -21,7 +21,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary))]/95 via-[hsl(var(--primary))]/90 to-[hsl(var(--primary))]/85"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg [text-shadow:_0_4px_12px_rgb(0_0_0_/_0.4)]">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-[hsl(var(--accent))] drop-shadow-lg [text-shadow:_0_4px_12px_rgb(0_0_0_/_0.4)]">
               Creative Marketing Solutions
             </h1>
             <p className="text-xl md:text-2xl mb-10 text-white font-medium drop-shadow-md">

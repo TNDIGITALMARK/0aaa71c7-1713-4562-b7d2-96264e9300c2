@@ -8,52 +8,52 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[hsl(var(--primary))]/80 backdrop-blur-md text-white sticky top-0 z-50 shadow-md">
-      <div className="container mx-auto px-4">
+    <header className="bg-white/95 backdrop-blur-md border-b border-[hsl(var(--border))] sticky top-0 z-50 shadow-sm">
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-[hsl(var(--accent))] rounded-md flex items-center justify-center">
-              <span className="text-white font-bold text-xl">S</span>
+          {/* Logo - Elegant Typography */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 bg-[hsl(var(--primary))] rounded-lg flex items-center justify-center group-hover:bg-[hsl(var(--accent))] transition-colors duration-400">
+              <span className="text-white font-semibold text-lg" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>S</span>
             </div>
-            <span className="text-xl font-bold">STRATOS DIGITAL</span>
+            <span className="text-lg font-semibold text-[hsl(var(--primary))] tracking-wide" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>STRATOS DIGITAL</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          {/* Desktop Navigation - Elegant Spacing */}
+          <nav className="hidden md:flex items-center gap-10">
             <Link
               href="/"
-              className="text-sm font-medium hover:text-[hsl(var(--accent))] transition-colors"
+              className="text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))] transition-colors duration-300 tracking-wide"
             >
               Home
             </Link>
             <Link
               href="/services"
-              className="text-sm font-medium hover:text-[hsl(var(--accent))] transition-colors"
+              className="text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))] transition-colors duration-300 tracking-wide"
             >
               Services
             </Link>
             <Link
               href="/portfolio"
-              className="text-sm font-medium hover:text-[hsl(var(--accent))] transition-colors"
+              className="text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))] transition-colors duration-300 tracking-wide"
             >
               Portfolio
             </Link>
             <Link
               href="/testimonials"
-              className="text-sm font-medium hover:text-[hsl(var(--accent))] transition-colors"
+              className="text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))] transition-colors duration-300 tracking-wide"
             >
               Testimonials
             </Link>
             <Link
               href="/team"
-              className="text-sm font-medium hover:text-[hsl(var(--accent))] transition-colors"
+              className="text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))] transition-colors duration-300 tracking-wide"
             >
               Team
             </Link>
             <Link
               href="/contact"
-              className="text-sm font-medium hover:text-[hsl(var(--accent))] transition-colors border border-[hsl(var(--accent))] px-4 py-2 rounded hover:bg-[hsl(var(--accent))] hover:text-white"
+              className="text-sm font-medium text-[hsl(var(--primary))] hover:text-white transition-all duration-300 border border-[hsl(var(--primary))] px-6 py-2.5 rounded-lg hover:bg-[hsl(var(--primary))] tracking-wide"
             >
               Contact
             </Link>
@@ -61,7 +61,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-[hsl(var(--primary))]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -71,46 +71,46 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-white/20">
-            <div className="flex flex-col gap-4">
+          <nav className="md:hidden py-6 border-t border-[hsl(var(--border))]">
+            <div className="flex flex-col gap-5">
               <Link
                 href="/"
-                className="text-sm font-medium hover:text-[hsl(var(--accent))] transition-colors py-2"
+                className="text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))] transition-colors py-2 tracking-wide"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/services"
-                className="text-sm font-medium hover:text-[hsl(var(--accent))] transition-colors py-2"
+                className="text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))] transition-colors py-2 tracking-wide"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
                 href="/portfolio"
-                className="text-sm font-medium hover:text-[hsl(var(--accent))] transition-colors py-2"
+                className="text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))] transition-colors py-2 tracking-wide"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Portfolio
               </Link>
               <Link
                 href="/testimonials"
-                className="text-sm font-medium hover:text-[hsl(var(--accent))] transition-colors py-2"
+                className="text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))] transition-colors py-2 tracking-wide"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Testimonials
               </Link>
               <Link
                 href="/team"
-                className="text-sm font-medium hover:text-[hsl(var(--accent))] transition-colors py-2"
+                className="text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))] transition-colors py-2 tracking-wide"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Team
               </Link>
               <Link
                 href="/contact"
-                className="text-sm font-medium bg-[hsl(var(--accent))] text-white px-4 py-2 rounded hover:opacity-90 transition-opacity text-center"
+                className="text-sm font-medium bg-[hsl(var(--primary))] text-white px-6 py-3 rounded-lg hover:bg-[hsl(var(--accent))] hover:text-[hsl(var(--accent-foreground))] transition-all text-center tracking-wide mt-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact

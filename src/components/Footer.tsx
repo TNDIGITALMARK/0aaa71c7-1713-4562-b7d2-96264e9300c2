@@ -4,20 +4,20 @@ import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-[hsl(var(--primary))] text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
+      <div className="container mx-auto px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          {/* Company Info - Elegant Typography */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-[hsl(var(--accent))] rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-[hsl(var(--accent))] rounded-lg flex items-center justify-center">
+                <span className="text-[hsl(var(--accent-foreground))] font-semibold text-lg" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>S</span>
               </div>
-              <span className="text-lg font-bold">STRATOS DIGITAL</span>
+              <span className="text-lg font-semibold tracking-wide" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>STRATOS DIGITAL</span>
             </div>
-            <p className="text-sm text-white/80 mb-4">
-              email: contact@stratosdigital.com
+            <p className="text-sm text-white/70 mb-4 font-light">
+              contact@stratosdigital.com
             </p>
-            <p className="text-sm text-white/80">
+            <p className="text-sm text-white/70 font-light leading-relaxed">
               123 Marketing Ave, Suite 100<br />
               CA 90210
             </p>
@@ -25,25 +25,25 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold mb-6 text-base tracking-wide" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>Quick Links</h3>
+            <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-sm text-white/80 hover:text-[hsl(var(--accent))] transition-colors">
+                <Link href="/" className="text-sm text-white/70 hover:text-[hsl(var(--accent))] transition-colors duration-300 font-light">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-sm text-white/80 hover:text-[hsl(var(--accent))] transition-colors">
+                <Link href="/services" className="text-sm text-white/70 hover:text-[hsl(var(--accent))] transition-colors duration-300 font-light">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio" className="text-sm text-white/80 hover:text-[hsl(var(--accent))] transition-colors">
+                <Link href="/portfolio" className="text-sm text-white/70 hover:text-[hsl(var(--accent))] transition-colors duration-300 font-light">
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-white/80 hover:text-[hsl(var(--accent))] transition-colors">
+                <Link href="/contact" className="text-sm text-white/70 hover:text-[hsl(var(--accent))] transition-colors duration-300 font-light">
                   Contact
                 </Link>
               </li>
@@ -52,57 +52,57 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li className="text-sm text-white/80">Digital Marketing</li>
-              <li className="text-sm text-white/80">Branding</li>
-              <li className="text-sm text-white/80">Social Media</li>
-              <li className="text-sm text-white/80">Lead Generation</li>
+            <h3 className="font-semibold mb-6 text-base tracking-wide" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>Services</h3>
+            <ul className="space-y-3">
+              <li className="text-sm text-white/70 font-light">Digital Marketing</li>
+              <li className="text-sm text-white/70 font-light">Branding</li>
+              <li className="text-sm text-white/70 font-light">Social Media</li>
+              <li className="text-sm text-white/70 font-light">Lead Generation</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold mb-4">Contact Info</h3>
-            <p className="text-sm text-white/80 mb-4">
+            <h3 className="font-semibold mb-6 text-base tracking-wide" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>Connect</h3>
+            <p className="text-sm text-white/70 mb-6 font-light">
               Phone: (555) 123-4567
             </p>
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[hsl(var(--accent))] transition-colors"
+                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-[hsl(var(--accent))] transition-all duration-400 hover:scale-110"
                 aria-label="Facebook"
               >
-                <Facebook size={16} />
+                <Facebook size={18} />
               </a>
               <a
                 href="#"
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[hsl(var(--accent))] transition-colors"
+                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-[hsl(var(--accent))] transition-all duration-400 hover:scale-110"
                 aria-label="Twitter"
               >
-                <Twitter size={16} />
+                <Twitter size={18} />
               </a>
               <a
                 href="#"
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[hsl(var(--accent))] transition-colors"
+                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-[hsl(var(--accent))] transition-all duration-400 hover:scale-110"
                 aria-label="Instagram"
               >
-                <Instagram size={16} />
+                <Instagram size={18} />
               </a>
               <a
                 href="#"
-                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[hsl(var(--accent))] transition-colors"
+                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-[hsl(var(--accent))] transition-all duration-400 hover:scale-110"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={16} />
+                <Linkedin size={18} />
               </a>
             </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <p className="text-sm text-white/60">
+        {/* Copyright - Elegant Divider */}
+        <div className="border-t border-white/10 mt-12 pt-8 text-center">
+          <p className="text-sm text-white/50 font-light tracking-wide">
             © {new Date().getFullYear()} Stratos Digital. All rights reserved.
           </p>
         </div>

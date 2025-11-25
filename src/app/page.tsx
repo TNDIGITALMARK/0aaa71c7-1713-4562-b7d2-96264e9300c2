@@ -268,16 +268,22 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-            {/* Project 1 */}
+            {/* Project 1 - Tech Startup */}
             <div className="group cursor-pointer">
-              <div className="relative h-72 mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-[hsl(var(--primary))] to-[hsl(var(--secondary))] shadow-md">
-                <div className="absolute inset-0 flex items-center justify-center text-white">
+              <div className="relative h-72 mb-6 rounded-xl overflow-hidden shadow-md">
+                <Image
+                  src="/generated/tech-startup-card.png"
+                  alt="Tech Startup Brand Launch"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-white z-10">
                   <div className="text-center px-6">
                     <div className="text-3xl font-semibold mb-3" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>Tech Startup</div>
-                    <div className="text-sm opacity-80 font-light tracking-wide">Brand Launch Campaign</div>
+                    <div className="text-sm opacity-90 font-light tracking-wide">Brand Launch Campaign</div>
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500"></div>
               </div>
               <div className="flex items-center justify-between px-2">
                 <span className="text-base font-semibold text-[hsl(var(--accent))]">300% Growth</span>
@@ -285,16 +291,22 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Project 2 */}
+            {/* Project 2 - E-Commerce */}
             <div className="group cursor-pointer">
-              <div className="relative h-72 mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-[hsl(var(--secondary))] to-[hsl(var(--primary))] shadow-md">
-                <div className="absolute inset-0 flex items-center justify-center text-white">
+              <div className="relative h-72 mb-6 rounded-xl overflow-hidden shadow-md">
+                <Image
+                  src="/generated/ecommerce-card.png"
+                  alt="E-Commerce Social Media Campaign"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-white z-10">
                   <div className="text-center px-6">
                     <div className="text-3xl font-semibold mb-3" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>E-Commerce</div>
-                    <div className="text-sm opacity-80 font-light tracking-wide">Social Media Revamp</div>
+                    <div className="text-sm opacity-90 font-light tracking-wide">Social Media Revamp</div>
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500"></div>
               </div>
               <div className="flex items-center justify-between px-2">
                 <span className="text-base font-semibold text-[hsl(var(--accent))]">10x Engagement</span>
@@ -302,16 +314,22 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Project 3 */}
+            {/* Project 3 - SaaS Platform */}
             <div className="group cursor-pointer">
-              <div className="relative h-72 mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-[hsl(var(--primary))] via-[hsl(var(--secondary))] to-[hsl(var(--primary))] shadow-md">
-                <div className="absolute inset-0 flex items-center justify-center text-white">
+              <div className="relative h-72 mb-6 rounded-xl overflow-hidden shadow-md">
+                <Image
+                  src="/generated/saas-platform-card.png"
+                  alt="SaaS Platform Rebranding"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 transition-all duration-500"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-white z-10">
                   <div className="text-center px-6">
                     <div className="text-3xl font-semibold mb-3" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>SaaS Platform</div>
-                    <div className="text-sm opacity-80 font-light tracking-wide">Complete Rebrand</div>
+                    <div className="text-sm opacity-90 font-light tracking-wide">Complete Rebrand</div>
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500"></div>
               </div>
               <div className="flex items-center justify-between px-2">
                 <span className="text-base font-semibold text-[hsl(var(--accent))]">140% YoY</span>
